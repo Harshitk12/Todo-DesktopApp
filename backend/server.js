@@ -12,7 +12,14 @@ const PORT = process.env.PORT || 5000;
 console.log(process.env.ATLAS_PASSWORD)
 const MONGO_URI = `mongodb+srv://harshitk5454:${process.env.ATLAS_PASSWORD}@cluster0.wei8nwv.mongodb.net/Todo` ;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://todo1-5qbiv6fv7-sololeveling2.vercel.app/"
+];
+
+app.use(cors({
+  origin: allowedOrigins
+}));
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
