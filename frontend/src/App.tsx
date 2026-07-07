@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://todo-f83m.onrender.com/api";
 
 type User = {
   id: string;
