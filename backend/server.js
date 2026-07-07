@@ -9,6 +9,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log(process.env.ATLAS_PASSWORD)
 const MONGO_URI = `mongodb+srv://harshitk5454:${process.env.ATLAS_PASSWORD}@cluster0.wei8nwv.mongodb.net/Todo` ;
 
 app.use(cors({ origin: "http://localhost:5173" }));
