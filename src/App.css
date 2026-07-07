@@ -1,0 +1,151 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  padding: 48px 16px;
+}
+
+.auth-box,
+.todo-box {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+}
+
+.auth-box h1,
+.todo-box h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+
+.auth-form,
+.todo-form {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-form {
+  flex-direction: column;
+}
+
+.auth-form input,
+.todo-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #c7d0d9;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.auth-form button,
+.todo-form button,
+.todo-item button,
+.top-bar button,
+.switch-button {
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.auth-form button,
+.todo-form button {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 12px 18px;
+}
+
+.auth-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.switch-button {
+  width: 100%;
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 12px;
+  margin-top: 16px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.top-bar h1 {
+  margin-bottom: 4px;
+}
+
+.top-bar p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.top-bar button {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 10px 12px;
+}
+
+.message {
+  margin: 16px 0 0;
+  color: #b91c1c;
+}
+
+.empty-message {
+  margin: 24px 0 0;
+  color: #6b7280;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-item input {
+  width: 18px;
+  height: 18px;
+}
+
+.todo-item button {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 8px 12px;
+}
+
+.completed {
+  color: #6b7280;
+  text-decoration: line-through;
+}
