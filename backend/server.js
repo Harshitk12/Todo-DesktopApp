@@ -14,7 +14,7 @@ const MONGO_URI = `mongodb+srv://harshitk5454:${process.env.ATLAS_PASSWORD}@clus
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://todo1-murex.vercel.app/"
+  "https://todo1-murex.vercel.app"
 ];
 
 app.use(cors({
