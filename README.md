@@ -1,75 +1,136 @@
-# React + TypeScript + Vite
+# Todo Desktop Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Todo application built with **React, TypeScript, Node.js, Express, MongoDB, and Electron**. The project is available as both a **web application** and a **Windows desktop application**. Users can securely register, log in, and manage their personal tasks through a clean and responsive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- User Registration & Login
+- JWT-based Authentication
+- Create, Update and Delete Tasks
+- Mark Tasks as Completed
+- Personal Task Management
+- Responsive React Frontend
+- RESTful Backend API
+- Electron Desktop Application
+- Windows Installer (.exe)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- React
+- TypeScript
+- Vite
+- CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Desktop
+- Electron
+- Electron Builder
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 
 ```
+Todo-DesktopApp/
+│
+├── backend/          # Express backend
+│
+└── frontend/
+    ├── electron/     # Electron main process
+    ├── src/          # React source code
+    ├── public/
+    ├── package.json
+    └── vite.config.ts
+```
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd Todo-DesktopApp
+```
+
+### 2. Install dependencies
+
+Backend
+
+```bash
+cd backend
+npm install
+```
+
+Frontend
+
+```bash
+cd ../frontend
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```env
+ATLAS_PASSWORD=your_mongodb_password
+JWT_SECRET=your_secret_key
+PORT=5000
+```
+
+---
+
+## Running the Project
+
+### Start Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+### Start React Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+### Start Electron
+
+Open another terminal.
+
+```bash
+cd frontend
+npm run electron
+```
+
+---
+
+## Build Desktop Application
+
+```bash
+cd frontend
+npm run build
+npm run dist
+```
+
+The generated Windows installer will be available inside the `release` folder.
+
+---
